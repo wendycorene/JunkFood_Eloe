@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UINavigationBarDelegate {
 
     override func viewDidLoad() {
-        reportTXT.text = AppDelegate.myModel?.combinedReport()
+        reportTXT.text = AppDelegate.myModel.combinedReport()
         super.viewDidLoad()
     }
 
@@ -25,7 +25,7 @@ class ViewController: UIViewController, UINavigationBarDelegate {
     }
     
     @IBAction func resetBTN(_ sender: UIButton) {
-        AppDelegate.myModel?.reset()
+        AppDelegate.myModel.reset()
     }
     
     @IBOutlet weak var reportTXT: UITextView!

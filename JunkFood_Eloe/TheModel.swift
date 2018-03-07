@@ -17,7 +17,7 @@ struct FoodData {
 class FoodRecorder {
     var foods: [FoodData]
     
-    init (foods: [FoodData]) {
+    init () {
         self.foods = []
     }
 
@@ -59,7 +59,7 @@ class FoodRecorder {
             combined += report(forItem: j) + "\n"
             j += 1
         }
-        return "\(combined) \nTotal Calories consumed: \(totalCalories())"
+        return "\(combined) \nTotal calories consumed: \(totalCalories())"
     }
     
     func reset () {
