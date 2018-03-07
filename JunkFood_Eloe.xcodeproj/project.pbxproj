@@ -14,6 +14,7 @@
 		502001EB204F4A1B002CC894 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 502001E9204F4A1B002CC894 /* LaunchScreen.storyboard */; };
 		502001F3204F4BE3002CC894 /* RecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502001F2204F4BE3002CC894 /* RecordTableViewController.swift */; };
 		502001F5204F523C002CC894 /* TheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502001F4204F523C002CC894 /* TheModel.swift */; };
+		50A9988920508DF600BB4306 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A9988820508DF600BB4306 /* AddFoodViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		502001EC204F4A1B002CC894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		502001F2204F4BE3002CC894 /* RecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewController.swift; sourceTree = "<group>"; };
 		502001F4204F523C002CC894 /* TheModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheModel.swift; sourceTree = "<group>"; };
+		50A9988820508DF600BB4306 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				502001E0204F4A1B002CC894 /* AppDelegate.swift */,
 				502001E2204F4A1B002CC894 /* ViewController.swift */,
 				502001E4204F4A1B002CC894 /* Main.storyboard */,
+				50A9988820508DF600BB4306 /* AddFoodViewController.swift */,
 				502001F4204F523C002CC894 /* TheModel.swift */,
 				502001F2204F4BE3002CC894 /* RecordTableViewController.swift */,
 				502001E7204F4A1B002CC894 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50A9988920508DF600BB4306 /* AddFoodViewController.swift in Sources */,
 				502001E3204F4A1B002CC894 /* ViewController.swift in Sources */,
 				502001F3204F4BE3002CC894 /* RecordTableViewController.swift in Sources */,
 				502001E1204F4A1B002CC894 /* AppDelegate.swift in Sources */,

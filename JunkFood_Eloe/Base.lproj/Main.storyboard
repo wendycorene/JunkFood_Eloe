@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Foods-->
         <scene sceneID="egQ-TA-3Aj">
             <objects>
                 <tableViewController id="Xur-Un-DkR" customClass="RecordTableViewController" customModule="JunkFood_Eloe" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,6 +35,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Gxd-fb-TTc" kind="unwind" unwindAction="unwindSegueWithSender:" id="YFf-EM-N1n"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -42,9 +45,10 @@
                             <outlet property="delegate" destination="Xur-Un-DkR" id="Iar-S5-Bel"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="W93-x9-his"/>
+                    <navigationItem key="navigationItem" title="Foods" id="W93-x9-his"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uC-Mn-yUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Gxd-fb-TTc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="502" y="-368"/>
         </scene>
@@ -64,7 +68,7 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUx-Be-4en">
-                                <rect key="frame" x="98" y="101" width="49" height="30"/>
+                                <rect key="frame" x="16" y="101" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Record"/>
                                 <connections>
@@ -73,7 +77,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq7-xh-bpx">
-                                <rect key="frame" x="211" y="101" width="39" height="30"/>
+                                <rect key="frame" x="168" y="101" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
@@ -88,6 +92,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IK-ck-kIZ">
+                                <rect key="frame" x="301" y="101" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New Food"/>
+                                <connections>
+                                    <segue destination="Epk-pQ-kKh" kind="show" id="SAu-or-8fp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -100,6 +112,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-223.19999999999999" y="-368.36581709145429"/>
+        </scene>
+        <!--Add Food View Controller-->
+        <scene sceneID="fxE-Wg-Sep">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1a7-MA-aRq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bn8-o8-HJK" userLabel="Exit" sceneMemberID="exit"/>
+                <viewController id="Epk-pQ-kKh" customClass="AddFoodViewController" customModule="JunkFood_Eloe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ocG-W2-TcN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a0d-rv-bvh">
+                                <rect key="frame" x="16" y="79" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Calories" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BL3-ID-i7d">
+                                <rect key="frame" x="16" y="140" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yt-Yr-qeP">
+                                <rect key="frame" x="116" y="240" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addBTN:" destination="Epk-pQ-kKh" eventType="touchUpInside" id="kJm-8U-CB6"/>
+                                    <segue destination="bn8-o8-HJK" kind="unwind" unwindAction="unwindSegueWithSender:" id="JGp-h8-xfp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzg-sA-V0k">
+                                <rect key="frame" x="212" y="240" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelBTN:" destination="Epk-pQ-kKh" eventType="touchUpInside" id="Zfr-0T-W21"/>
+                                    <segue destination="bn8-o8-HJK" kind="unwind" unwindAction="unwindSegueWithSender:" id="bbd-GZ-3mw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="mrt-rr-Szj"/>
+                    </view>
+                    <connections>
+                        <outlet property="caloriesTF" destination="BL3-ID-i7d" id="GZt-yQ-uce"/>
+                        <outlet property="nameTF" destination="a0d-rv-bvh" id="d7m-Wc-zE8"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-223" y="403"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jYK-u6-0AF">

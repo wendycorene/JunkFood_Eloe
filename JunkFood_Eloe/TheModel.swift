@@ -25,9 +25,13 @@ class FoodRecorder {
         let popcorn = FoodData(name: "Popcorn", calories: 106, tally: 0)
         let coke = FoodData(name: "Coca-Cola", calories: 140, tally: 0)
         let crisps = FoodData(name: "Potato Chips", calories: 152, tally: 0)
+        let tissues = FoodData(name: "Box of Tissues", calories: 420, tally: 0)
+        let glue = FoodData(name: "Bottle of Glue", calories: 144, tally: 0)
         foods.append(popcorn)
         foods.append(coke)
         foods.append(crisps)
+        foods.append(tissues)
+        foods.append(glue)
     }
     
     func increaseTally(forItem i: Int) {
@@ -69,4 +73,10 @@ class FoodRecorder {
             j += 1
         }
     }
+    
+    func addFoodItem(name: String, calories: Double) {
+        let newFood = FoodData(name: name, calories: calories, tally: 0)
+        foods.append(newFood)
+    }
+    
 }

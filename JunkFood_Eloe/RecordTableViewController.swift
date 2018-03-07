@@ -48,6 +48,7 @@ class RecordTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         AppDelegate.myModel.increaseTally(forItem: indexPath.row)
+        
     }
 
     /*

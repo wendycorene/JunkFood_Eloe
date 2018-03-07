@@ -35,5 +35,8 @@ class ViewController: UIViewController, UINavigationBarDelegate {
     
     @IBOutlet weak var reportTXT: UITextView!
     
+    @IBAction func unwindSegue(Sender: UIStoryboardSegue){
+        
+    }
 }
 
