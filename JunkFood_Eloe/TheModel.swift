@@ -63,8 +63,10 @@ class FoodRecorder {
     }
     
     func reset () {
-        for var i in foods {
-            i.tally = 0
+        var j = 0
+        for i in foods {
+            foods[j].tally = 0
+            j += 1
         }
     }
 }

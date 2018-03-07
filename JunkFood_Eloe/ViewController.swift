@@ -15,6 +15,10 @@ class ViewController: UIViewController, UINavigationBarDelegate {
         super.viewDidLoad()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        reportTXT.text = AppDelegate.myModel.combinedReport()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -26,6 +30,7 @@ class ViewController: UIViewController, UINavigationBarDelegate {
     
     @IBAction func resetBTN(_ sender: UIButton) {
         AppDelegate.myModel.reset()
+        self.viewDidLoad()
     }
     
     @IBOutlet weak var reportTXT: UITextView!

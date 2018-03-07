@@ -34,7 +34,7 @@ class RecordTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return AppDelegate.myModel.foods.count
     }
 
     
@@ -46,6 +46,9 @@ class RecordTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        AppDelegate.myModel.increaseTally(forItem: indexPath.row)
+    }
 
     /*
     // Override to support conditional editing of the table view.
