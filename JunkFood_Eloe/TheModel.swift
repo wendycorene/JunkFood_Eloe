@@ -12,7 +12,6 @@ struct FoodData {
     var name: String
     var calories: Double
     var tally: Int
-    
 }
 
 class FoodRecorder {

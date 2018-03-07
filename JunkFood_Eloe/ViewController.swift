@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationBarDelegate {
 
     override func viewDidLoad() {
+        reportTXT.text = AppDelegate.myModel?.combinedReport()
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,6 +23,12 @@ class ViewController: UIViewController {
     @IBAction func recordBTN(_ sender: UIButton) {
         
     }
+    
+    @IBAction func resetBTN(_ sender: UIButton) {
+        AppDelegate.myModel?.reset()
+    }
+    
+    @IBOutlet weak var reportTXT: UITextView!
     
 }
 
